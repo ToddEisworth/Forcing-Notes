@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Title</title>
+  <title>The language of set theory</title>
 
-  <p> Text of section. </p>
-
+  <p>The language of set theory consists of a very few symbols together with some basic rules for how these symbols may be concatenated.
+    Most of the symbols are taken from logic, and our official list of symbols includes the following:
+  </p>
+<p>
+  connectives <m>\quad\wedge</m> and <m>\neg</m>,
+</p>
+<p>
+  quantifers <m>\quad\exists</m>,
+</p>
+<p>
+  variables  <m>\quad v_0, v_1, v_2, \dots</m>,
+</p>
+<p>
+  parentheses   <m>\quad )</m> and <m>(</m>,
+</p>
+<p>
+  equality symbol  <m>\quad=</m>, and
+</p>
+<p>
+  membership symbol  <m>\quad\in</m>
+</p>
 </section>

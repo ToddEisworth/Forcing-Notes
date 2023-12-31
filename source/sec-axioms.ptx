@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-axioms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The axioms of ZFC</title>
+
+  <axiom xml:id="axiom-0">
+    <title>Set Existence</title>
+    
+    
+    <statement>
+        <p>
+            <md>
+                <mrow> \amp\exists x(x=x) </mrow>
+            </md>
+        </p>
+    </statement>
+  </axiom>
+
+
+  <axiom xml:id="axiom-1">
+    <title>Extensionality</title>
+    <statement>
+        <p>
+            <md>
+                <mrow> \amp\forall x\forall y(\forall z(z\in x\leftrightarrow z\in y)\rightarrow x=y) </mrow>
+            </md>
+        </p>
+    </statement>
+  </axiom>
+
+<axiom xml:id="axiom-2">
+    <title>Foundation</title>
+    
+    
+    <statement>
+        <p>
+            <md>
+                <mrow> \amp \forall x[\exists y(y\in x)\rightarrow \exists y(y\in x\wedge \neg\exists z(z\in x\wedge z\in y))]</mrow>
+            </md>
+        </p>
+    </statement>
+</axiom>
+
+<axiom xml:id="axiom-comprehension">
+    <title>Comprehension Schema</title>
+    
+    
+    <statement>
+        <p>
+            For each formula <m>\phi</m> with free variables among <m>x, z, w_1, \dots, w_n,</m>, the following statement is an axiom:
+            <md>
+                <mrow> \amp\forall z\forall w_1\dots\forall w_n\exists y\forall x(x\in y\leftrightarrow x\in z\wedge \phi(x,y,w_1,\dots, w_n)) </mrow>
+            </md>
+        </p>
+    </statement>
+</axiom>
+
+<axiom xml:id="axiom-pairing">
+    <title>Pairing</title>
+    
+    
+    <statement>
+        <p>
+            <md>
+                <mrow> \amp \forall x\forall y\exists z(x\in z\wedge y\in z)</mrow>
+            </md>
+        </p>
+    </statement>
+</axiom>
+
+<axiom xml:id="axiom-union">
+    <title>Union</title>
+    
+    
+    <statement>
+        <p>
+            <md>
+                <mrow> \amp\forall x\exists y\forall z\forall w(w\in z\wedge z\in x\rightarrow x\in y) </mrow>
+            </md>
+        </p>
+    </statement>
+</axiom>
+
+<axiom xml:id="axiom-replacement">
+    <title>Replacement Schema</title>
+    
+    
+    <statement>
+        <p>
+            For each formula <m>\phi</m> with free variables among <m>x, y, z, w_1, \dots, w_n,</m>, the following statement is an axiom: 
+            <md>
+                <mrow> \amp\forall z\forall w_1\dots\forall w_n[(\forall x\in z)(\exists!y)\phi\rightarrow\exists v(\forall x\in z)(\exists y\in v)\phi] </mrow>
+            </md>
+        </p>
+    </statement>
+</axiom>
+</section>
