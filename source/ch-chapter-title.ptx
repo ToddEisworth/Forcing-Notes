@@ -8,6 +8,7 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-language.ptx" />
+  <xi:include href="sec-semantics.ptx"/>
   <xi:include href="sec-axioms.ptx" />
 </chapter>

@@ -94,4 +94,13 @@
         </p>
     </statement>
 </axiom>
+
+<definition xml:id="def-basics">
+    <statement>
+        <p>
+            We define <m>\subseteq</m>, <m>\emptyset</m>, <m>S</m>,  and well-ordering.
+        </p>
+    </statement>
+</definition>
+
 </section>

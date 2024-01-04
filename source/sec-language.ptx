@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-language" >
+  <title>The language of set theory</title>
+<objectives>
+<ol>
+  <li>
+    <title>Objectives</title>
+    <p>
+      blah
+    </p>
+  </li>
+  <li>
+    <p>
+      blah
+    </p>
+  </li>
+</ol>
+</objectives>
+
+  <p>In these notes, we take the "official" language of set theory to consist of a very few symbols together with some basic rules for how these symbols may be concatenated.
+     The language incorporates the following symbols:
+  </p>
+
+  <definition xml:id="def-language">
+    <statement>
+      <p>
+       The language of set theory, denoted <m>LST</m>, consists of the following symbols:
+      </p>
+      <p>
+        connectives <m>\quad\wedge</m> and <m>\neg</m>
+      </p>
+      <p>
+        quantifer  <m>\quad\exists</m>
+      </p>
+      <p>
+        variables  <m>\quad v_0, v_1, v_2, \dots</m>,
+      </p>
+      <p>
+        parentheses   <m>\quad (\quad</m> and <m>\quad)</m>,
+      </p>
+      <p>
+        the equality symbol  <m>\quad=</m>, and
+      </p>
+      <p>
+       the membership symbol  <m>\quad\in</m>.
+      </p>
+    </statement>
+  </definition>
+
+<definition xml:id="def-">
+  <statement>
+    <ol>
+      <li>
+        <p>
+          An <em>expression</em> in the language of set theory is defined to be any finite string built from the symbols of <m>LST</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          We define a <em>formula</em> of the language of set theory to any expression generated using the following rules:
+        </p>
+        <ul> 
+        <li>
+        <p>
+          <m>(v_i\in v_j)</m> and <m>(v_i=v_j)</m> are formulas (called <em>atomic</em> formulas) for any <m>i</m> and <m>j</m>
+          </p>
+        </li>
+          <li>
+          <p>
+            If <m>\phi</m> and <m>\psi</m> are formulas then so are <m>(\phi\wedge\psi)</m> and <m>(\neg\phi)</m>
+          </p>
+         </li>
+         <li>
+           <p>
+             If <m>\phi</m> is a formula then so is <m>(\exists v_i\phi)</m> for any <m>i</m>.
+           </p>
+         </li>
+        </ul>
+      </li>
+    </ol>
+  </statement>
+</definition>
+  
+<p> We will also unapologetically make use of other standard symbols, which are (as usual) defined in terms of <m>LST</m> via the following abbreviations:</p>
+
+<ul>
+<li>
+<p>
+  <m>(\phi\vee\psi)</m> abbreviates <m>(\neg((\neg\phi)\wedge(\neg\psi)))</m>
+</p>
+</li>
+<li>
+<p>
+  <m>(\phi\rightarrow\psi)</m> abbreviates <m>((\neg\phi)\vee\psi)</m>
+</p>
+</li>
+<li>
+<p>
+  <m>(\phi\leftrightarrow\psi)</m> abbreviates <m>((\phi\rightarrow\psi)\vee(\psi\rightarrow\phi))</m>
+</p>
+</li>
+<li>
+<p>
+<m>(\forall v_i\phi)</m> abbreviates <m>(\neg(\exists v_i(\neg\phi)))</m>
+</p>
+</li>
+<li>
+<p>
+  <m>(v_i\neq v_j)</m> abbreviates <m>(\neg(v_i=v_j))</m>
+</p>
+</li>
+<li>
+  <p>
+      <m>(v_i\notin v_j)</m> abbreviates <m>(\neg(v_i\in v_j))</m>
+  </p>
+</li>
+</ul>
+
+<outcomes>
+  
+</outcomes>
+
+</section>
