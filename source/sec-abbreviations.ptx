@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-abbreviations" >
+  <title>Augmenting the Language</title>
+
+<p>
+  The official definition of <m>\lst</m> we gave in the previous section is not reflective of how the language of set theory is used in practice.  The limited definition is
+  useful for defining concepts via recursion, but of course in practice we use a language augmented with other symbols.  For example, we will make use of the the following
+ symbols, all of which are defined in terms of <m>\lst</m> via  abbreviations:</p>
+    <ul>
+    <li>
+    <p>
+      <m>(\phi\vee\psi)</m> abbreviates <m>(\neg((\neg\phi)\wedge(\neg\psi)))</m>
+    </p>
+    </li>
+    <li>
+    <p>
+      <m>(\phi\rightarrow\psi)</m> abbreviates <m>((\neg\phi)\vee\psi)</m>
+    </p>
+    </li>
+    <li>
+    <p>
+      <m>(\phi\leftrightarrow\psi)</m> abbreviates <m>((\phi\rightarrow\psi)\vee(\psi\rightarrow\phi))</m>
+    </p>
+    </li>
+    <li>
+    <p>
+    <m>(\forall v_i\phi)</m> abbreviates <m>(\neg(\exists v_i(\neg\phi)))</m>
+    </p>
+    </li>
+    <li>
+    <p>
+      <m>(v_i\neq v_j)</m> abbreviates <m>(\neg(v_i=v_j))</m>
+    </p>
+    </li>
+    <li>
+      <p>
+          <m>(v_i\notin v_j)</m> abbreviates <m>(\neg(v_i\in v_j))</m>
+      </p>
+    </li>
+    </ul>
+
+<p>
+Introducing a defined relation or predicate to our language works on similar principles:  these are just symbols introduced to abbreviate more complex statements in <m>\lst</m>.
+For example,  we can the binary relation symbol <m>\subseteq</m> is defined by declaring
+
+<men>x\subseteq y\text{  abbreviates  }(\forall z((z\in y)\rightarrow (z\in x))),</men>
+
+while a predicate capturing "<m>x</m> is empty" can be introduced by 
+
+<men>\empty(x)\text{  abbreviates  }(\forall y(y\notin x)).</men>
+
+
+</p>
+
+</section>

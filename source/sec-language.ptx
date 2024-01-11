@@ -2,30 +2,15 @@
 
 <section xml:id="sec-section-language" >
   <title>The language of set theory</title>
-<objectives>
-<ol>
-  <li>
-    <title>Objectives</title>
-    <p>
-      blah
-    </p>
-  </li>
-  <li>
-    <p>
-      blah
-    </p>
-  </li>
-</ol>
-</objectives>
 
-  <p>In these notes, we take the "official" language of set theory to consist of a very few symbols together with some basic rules for how these symbols may be concatenated.
+  <p>Our version of the language of set theory will consist of a very few symbols together with some basic rules for how these symbols may be concatenated.
      The language incorporates the following symbols:
   </p>
 
   <definition xml:id="def-language">
     <statement>
       <p>
-       The language of set theory, denoted <m>LST</m>, consists of the following symbols:
+       The language of set theory, denoted <m>\lst</m>, consists of the following symbols:
       </p>
       <p>
         connectives <m>\quad\wedge</m> and <m>\neg</m>
@@ -53,7 +38,7 @@
     <ol>
       <li>
         <p>
-          An <em>expression</em> in the language of set theory is defined to be any finite string built from the symbols of <m>LST</m>
+          An <em>expression</em> in the language of set theory is defined to be any finite string built from the symbols of <m>\lst</m>
         </p>
       </li>
       <li>
@@ -78,47 +63,33 @@
          </li>
         </ul>
       </li>
+      <li>
+        <p> By recursion we define a function <m>\subform</m> that assigned to each formula <m>\phi</m> of <m>\lst</m> the set <m>\subform(\phi)</m> of all of its <em>subformulas</em></p> 
+        <ul>
+         <li>
+           <p>
+             If <m>\phi</m> is an atomic formula, then <m>\subform(\phi)=\phi</m>
+           </p>
+         </li>
+         <li>
+           <p>
+           <m>\subform((\phi\wedge\psi))=\subform(\phi)\cup \subform(\psi)\cup\{(\phi\wedge\psi)\}</m>
+           </p>
+         </li>
+         <li>
+          <p>
+            <m>\subform((\neg\phi))=\subform(\phi)\cup\{(\neg\phi)\}</m>
+          </p>
+         </li>
+         <li>
+          <p>
+            <m>\subform((\exists v_i\phi))=\subform(\phi)\cup\{(\exists v_i\phi)\}</m>
+          </p>
+         </li>
+        </ul>
+      </li>
     </ol>
   </statement>
-</definition>
-  
-<p> We will also unapologetically make use of other standard symbols, which are (as usual) defined in terms of <m>LST</m> via the following abbreviations:</p>
-
-<ul>
-<li>
-<p>
-  <m>(\phi\vee\psi)</m> abbreviates <m>(\neg((\neg\phi)\wedge(\neg\psi)))</m>
-</p>
-</li>
-<li>
-<p>
-  <m>(\phi\rightarrow\psi)</m> abbreviates <m>((\neg\phi)\vee\psi)</m>
-</p>
-</li>
-<li>
-<p>
-  <m>(\phi\leftrightarrow\psi)</m> abbreviates <m>((\phi\rightarrow\psi)\vee(\psi\rightarrow\phi))</m>
-</p>
-</li>
-<li>
-<p>
-<m>(\forall v_i\phi)</m> abbreviates <m>(\neg(\exists v_i(\neg\phi)))</m>
-</p>
-</li>
-<li>
-<p>
-  <m>(v_i\neq v_j)</m> abbreviates <m>(\neg(v_i=v_j))</m>
-</p>
-</li>
-<li>
-  <p>
-      <m>(v_i\notin v_j)</m> abbreviates <m>(\neg(v_i\in v_j))</m>
-  </p>
-</li>
-</ul>
-
-<outcomes>
-  
-</outcomes>
+</definition> 
 
 </section>

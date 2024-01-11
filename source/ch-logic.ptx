@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Models of ZFC</title>
+<chapter xml:id="ch-logic" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Logical Prerequisites</title>
 
   <introduction>
     <p> Lorum Ipsem </p>
@@ -9,6 +9,8 @@
 
   <!-- include sections -->
   <xi:include href="sec-language.ptx" />
+  <xi:include href="sec-logic.ptx" />
+  <xi:include href="sec-abbreviations.ptx"/>
   <xi:include href="sec-semantics.ptx"/>
   <xi:include href="sec-axioms.ptx" />
 </chapter>
