@@ -1,0 +1,56 @@
+<section xml:id="sec-">
+    <title>Logical Axioms</title>
+    
+    <p>
+    Our formal concept of proof is grounded in standard first order logic with an equality symbol. For definitiveness,
+    we will assume the following axioms and rules of inference:
+    </p>
+    <definition xml:id="def-FOL">
+        <title>Logical Axioms</title>
+        <statement>
+            <p>
+            We assume the following logical axioms
+            </p>
+            <ol>
+                <li>
+                    <p>
+                    <m> \phi\rightarrow(\psi\rightarrow\phi)</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(\phi\rightarrow (\psi\rightarrow\eta))\rightarrow((\phi\rightarrow\psi)\rightarrow(\phi\rightarrow\eta)).</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(\neg\phi\rightarrow\neg\psi)\rightarrow(\psi\rightarrow\phi)</m>    
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(\forall x)(\phi\rightarrow\psi)\rightarrow(\phi\rightarrow(\forall x)\psi)</m> where <m>x</m> is not free in <m>\phi</m>.    
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(\forall x)\phi(x)\rightarrow\phi(y)</m> where <m>x</m> has no free occurrence in a subformula of form <m>(\forall y)\psi</m>.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+    </definition>
+<p> The rules of inference we adopt are as follows:</p>
+<ul>
+    <li>
+        <p>
+            <m>\psi</m> follows from <m>\phi</m> and <m>\phi\rightarrow\psi</m>, and
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>(\forall x)\phi</m> follows from <m>\phi</m>.    
+        </p>
+    </li>
+</ul>
+</section>
