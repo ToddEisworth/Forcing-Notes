@@ -27,6 +27,7 @@
     \DeclareMathOperator{\lst}{\mathcal{L}_S}
     \DeclareMathOperator{\subform}{Subform}
     \DeclareMathOperator{\empty}{Empty}
+    \DeclareMathOperator{\Form}{Form}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

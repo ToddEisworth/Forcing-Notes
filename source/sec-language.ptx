@@ -16,7 +16,7 @@
         connectives <m>\quad\wedge</m> and <m>\neg</m>
       </p>
       <p>
-        quantifer  <m>\quad\exists</m>
+        quantifier  <m>\quad\forall</m>
       </p>
       <p>
         variables  <m>\quad v_0, v_1, v_2, \dots</m>,
@@ -33,7 +33,11 @@
     </statement>
   </definition>
 
-<definition xml:id="def-">
+  <p>
+    Given our list of allowed symbols, the meaningful statements that can be expressed in our language are produced as follows:
+  </p>
+
+<definition xml:id="def-formula">
   <statement>
     <ol>
       <li>
@@ -58,38 +62,60 @@
          </li>
          <li>
            <p>
-             If <m>\phi</m> is a formula then so is <m>(\exists v_i\phi)</m> for any <m>i</m>.
+             If <m>\phi</m> is a formula then so is <m>(\forall v_i\phi)</m> for any <m>i</m>.
            </p>
          </li>
         </ul>
       </li>
       <li>
-        <p> By recursion we define a function <m>\subform</m> that assigned to each formula <m>\phi</m> of <m>\lst</m> the set <m>\subform(\phi)</m> of all of its <em>subformulas</em></p> 
-        <ul>
-         <li>
-           <p>
-             If <m>\phi</m> is an atomic formula, then <m>\subform(\phi)=\phi</m>
-           </p>
-         </li>
-         <li>
-           <p>
-           <m>\subform((\phi\wedge\psi))=\subform(\phi)\cup \subform(\psi)\cup\{(\phi\wedge\psi)\}</m>
-           </p>
-         </li>
-         <li>
-          <p>
-            <m>\subform((\neg\phi))=\subform(\phi)\cup\{(\neg\phi)\}</m>
-          </p>
-         </li>
-         <li>
-          <p>
-            <m>\subform((\exists v_i\phi))=\subform(\phi)\cup\{(\exists v_i\phi)\}</m>
-          </p>
-         </li>
-        </ul>
+        <p>
+          We let <m>\Form_{\lst}</m> denote the collection of formulas of <m>\lst</m> defined above.
+        </p>
       </li>
     </ol>
   </statement>
 </definition> 
 
+<p>The above is our official way of building formulas. We will shortly introduce the other standard logical 
+   symbols as abbreviations of more complex formulas from <m>\Form_{\lst}</m>, but as we expand our language we want to keep in mind that the expressions and formulas in the augmented
+   language are actually abbreviations of something written in <m>\lst.</m>  Our official language is more limited so that it is easier to make definitions and prove facts about
+   <m>\Form_{\lst}</m> without needing to break into too many cases.   We illustrate the way this works with a couple of definitions and a lemma.
+</p>
+
+<definition>
+<statement>
+  <p> By recursion we define a function <m>\subform</m> that assigned to each formula <m>\phi</m> of <m>\lst</m> the set <m>\subform(\phi)</m> of all of its <em>subformulas</em></p> 
+  <ul>
+   <li>
+     <p>
+       If <m>\phi</m> is an atomic formula, then <m>\subform(\phi)=\phi</m>
+     </p>
+   </li>
+   <li>
+     <p>
+     <m>\subform((\phi\wedge\psi))=\subform(\phi)\cup \subform(\psi)\cup\{(\phi\wedge\psi)\}</m>
+     </p>
+   </li>
+   <li>
+    <p>
+      <m>\subform((\neg\phi))=\subform(\phi)\cup\{(\neg\phi)\}</m>
+    </p>
+   </li>
+   <li>
+    <p>
+      <m>\subform((\forall v_i\phi))=\subform(\phi)\cup\{(\forall v_i\phi)\}</m>
+    </p>
+   </li>
+  </ul>
+</statement>
+</definition>
+
+<p>
+The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and returns the collection of all the formulas of <m>\lst</m> that are used to build <m>\phi</m>.  
+</p>
+<definition>
+  <title>Free and Bound</title>
+<statement>blah blah blah</statement>
+
+</definition>
 </section>
