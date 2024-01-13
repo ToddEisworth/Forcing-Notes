@@ -4,8 +4,8 @@
   <title>Augmenting the Language</title>
 
 <p>
-  The official definition of <m>\lst</m> we gave in the previous section is not reflective of how the language of set theory is used in practice.  The limited definition is
-  useful for defining concepts via recursion, but of course in practice we use a language augmented with other symbols.  For example, we will make use of the the following
+The official definition of <m>\lst</m> we gave in earlier is not reflective of how the language of set theory is used in practice.  The limited definition is
+useful for defining concepts via recursion, but of course in practice we use a language augmented with other symbols.  For example, we will make use of the the following
  symbols, all of which are defined in terms of <m>\lst</m> via  abbreviations:</p>
     <ul>
     <li>
