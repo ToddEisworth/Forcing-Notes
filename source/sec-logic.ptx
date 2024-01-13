@@ -2,8 +2,9 @@
     <title>Logical Axioms</title>
     
     <p>
-    Our formal concept of proof is grounded in standard first order logic with an equality symbol. For definitiveness,
-    we will assume the following axioms and rules of inference:
+    Our formal concept of proof is grounded in standard first order logic with an equality symbol.
+    The exact formulation does matter very much, but for definitiveness we will work with
+    the following logical axioms and rules of inference: 
     </p>
     <definition xml:id="def-FOL">
         <title>Logical Axioms</title>
@@ -53,4 +54,7 @@
         </p>
     </li>
 </ul>
+<p>
+    So the question is whether or not this is a wizywg
+</p>
 </section>

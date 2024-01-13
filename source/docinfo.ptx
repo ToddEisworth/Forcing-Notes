@@ -28,6 +28,7 @@
     \DeclareMathOperator{\subform}{Subform}
     \DeclareMathOperator{\empty}{Empty}
     \DeclareMathOperator{\Form}{Form}
+    \DeclareMathOperator{\Sent}{Sent}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

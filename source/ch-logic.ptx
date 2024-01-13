@@ -4,7 +4,9 @@
   <title>Logical Prerequisites</title>
 
   <introduction>
-    <p> Lorum Ipsem </p>
+    <p> The goal in this chapter is to develop first order logic to the degree necessary to understand
+      the metamathematical aspects of indepedence proofs.  This is really only
+    a sketch.</p>
   </introduction>
 
   <!-- include sections -->

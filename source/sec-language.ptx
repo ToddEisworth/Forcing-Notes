@@ -115,7 +115,32 @@ The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and return
 </p>
 <definition>
   <title>Free and Bound</title>
-<statement>blah blah blah</statement>
+<statement>
+<ol>
+  <li>
+    <p>
+      The <term>range</term> of an occurence of a quantifier <m>\forall v_i</m> in a formula <m>\phi</m>
+      is the unique subformula <m>(\forall v_i\psi)</m> of <m>\phi</m> beginning with
+      the occurence in question.
+    </p>
+  </li>
+  <li>
+    <p>
+    An occurence of a variable <m>v_i</m> in a formula is <term>bound</term>
+    if it is within the range of a quantifier of the form <m>\forall v_i</m>. Otherwise
+    the occurence is <term>free</term>.
+    </p>
+  </li>
+  <li>
+    <p>
+      A formula without free variables is called a <term>sentence</term>, and we 
+      let <m>\Sent_{\lst}</m> denote the collection of sentences in our language <m>\lst</m>.
+    </p>
+  </li>
+  
+</ol>
+
+</statement>
 
 </definition>
 </section>

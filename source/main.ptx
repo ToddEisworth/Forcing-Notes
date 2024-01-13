@@ -4,9 +4,9 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="my-great-book">
-    <title>Notes on Forcing</title>
-    <subtitle>MATH 7000</subtitle>
+  <book xml:id="forcing">
+    <title>Models of Set Theory</title>
+    <subtitle>An Introduction to Forcing and Independence Proofs</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
