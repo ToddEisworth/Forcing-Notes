@@ -79,10 +79,12 @@
 <p>The above is our official way of building formulas. We will shortly introduce the other standard logical 
    symbols as abbreviations of more complex formulas from <m>\Form_{\lst}</m>, but as we expand our language we want to keep in mind that the expressions and formulas in the augmented
    language are actually abbreviations of something written in <m>\lst.</m>  Our official language is more limited so that it is easier to make definitions and prove facts about
-   <m>\Form_{\lst}</m> without needing to break into too many cases.   We illustrate the way this works with a couple of definitions and a lemma.
+   <m>\Form_{\lst}</m> without needing to break into too many cases, as illustrated
+   in the following definitions.
 </p>
 
 <definition>
+  <title>Subformulas</title>
 <statement>
   <p> By recursion we define a function <m>\subform</m> that assigned to each formula <m>\phi</m> of <m>\lst</m> the set <m>\subform(\phi)</m> of all of its <em>subformulas</em></p> 
   <ul>
@@ -114,7 +116,7 @@
 The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and returns the collection of all the formulas of <m>\lst</m> that are used to build <m>\phi</m>.  
 </p>
 <definition>
-  <title>Free and Bound</title>
+  <title>Free and Bound Variables</title>
 <statement>
 <ol>
   <li>
@@ -137,10 +139,7 @@ The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and return
       let <m>\Sent_{\lst}</m> denote the collection of sentences in our language <m>\lst</m>.
     </p>
   </li>
-  
 </ol>
-
 </statement>
-
 </definition>
 </section>

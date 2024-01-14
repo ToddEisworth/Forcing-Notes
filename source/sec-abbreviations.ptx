@@ -4,9 +4,9 @@
   <title>Augmenting the Language</title>
 
 <p>
-The official definition of <m>\lst</m> we gave in earlier is not reflective of how the language of set theory is used in practice.  The limited definition is
-useful for defining concepts via recursion, but of course in practice we use a language augmented with other symbols.  For example, we will make use of the the following
- symbols, all of which are defined in terms of <m>\lst</m> via  abbreviations:</p>
+  The official definition of <m>\lst</m> we gave in the previous section is not reflective of how the language of set theory is used in practice.  The limited definition is
+  useful for defining concepts via recursion, but of course in practice we use a language augmented with other symbols.  For example, we will make use of the the following
+ symbols, all of which are defined in terms of <m>\lst</m> via  abbreviations:
     <ul>
     <li>
     <p>
@@ -39,9 +39,14 @@ useful for defining concepts via recursion, but of course in practice we use a l
       </p>
     </li>
     </ul>
+</p>
+<p>
+We also make now a few concessions to readability in our language: we may omit parentheses
+when no confusion is possible, and we will freely use other letters to stand for variables. 
+</p>
 
 <p>
-Introducing a defined relation or predicate to our language works on similar principles:  these are just symbols introduced to abbreviate more complex statements in <m>\lst</m>.
+Introducing a defined relation (or <term>predicate</term>) to our language works on similar principles:  these are just symbols introduced to abbreviate more complex statements in <m>\lst</m>.
 For example,  we can the binary relation symbol <m>\subseteq</m> is defined by declaring
 
 <men>x\subseteq y\text{  abbreviates  }(\forall z((z\in y)\rightarrow (z\in x))),</men>
@@ -49,8 +54,6 @@ For example,  we can the binary relation symbol <m>\subseteq</m> is defined by d
 while a predicate capturing "<m>x</m> is empty" can be introduced by 
 
 <men>\empty(x)\text{  abbreviates  }(\forall y(y\notin x)).</men>
-
-
 </p>
 
 </section>
