@@ -3,5 +3,13 @@
 <section xml:id="sec-section-semantics" >
   <title>Semantics</title>
 
-<p>adfjakfjadklal</p>
+<p>Suppose we are given a class <m>M</m> and relational class <m>E\subseteq M\times M</m>.  What should it mean to say that a sentence <m>\phi</m> of the language of set theory 
+holds in the structure <m>\langle M, E\rangle</m>?  To address this question we introduce a new predicate ``<m>\models</m>'' (``satisfaction''), and define the meaning of 
+<md>
+\langle M, E\rangle\models \phi  
+</md>
+by a recursion on the structure of <m>\phi</m>.  
+</p>
+
+
 </section>
