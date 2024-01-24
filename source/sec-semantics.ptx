@@ -3,13 +3,54 @@
 <section xml:id="sec-section-semantics" >
   <title>Semantics</title>
 
-<p>Suppose we are given a class <m>M</m> and relational class <m>E\subseteq M\times M</m>.  What should it mean to say that a sentence <m>\phi</m> of the language of set theory 
-holds in the structure <m>\langle M, E\rangle</m>?  To address this question we introduce a new predicate ``<m>\models</m>'' (``satisfaction''), and define the meaning of 
-<md>
-\langle M, E\rangle\models \phi  
-</md>
-by a recursion on the structure of <m>\phi</m>.  
+<p>Suppose we are given a class <m>M</m> and relational class <m>E\subseteq M\times M</m>.  What
+   should it mean to say that a sentence <m>\phi</m> of the language of set theory 
+holds in the structure <m>\langle M, E\rangle</m>?  
 </p>
 
+\begin{<definition>
+  Let <m>M</m> be a class and let <m>E</m> be a binary relation on <m>M</m>.  Given a formula <m>\phi(x_1,\dots,x_n)</m>
+  of the language of set theory, the <term>relativization of <m>\phi</m> to <m>\langle M, E\rangle</m></term>
+  is the formula <md>
+    <mrow> \amp\phi^{M, E}(x_1,\dots,x_n)  </mrow>
+  </md>
+  defined inductively by
+  <ol>
+    <li>
+      <p>
+        <m>(x\in y)^{M, E}</m>  is the formula <m>x E y</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>(x=y)^{M, E}</m> is the formula <m>x=y</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>(\neg\phi)^{M, E}</m> is the formula <m>\neg(\phi^{M, E})</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>(\phi\wedge\psi)^{M, E}</m> is the formula <m>\phi^{M, E}\wedge\psi^{M, E}</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>(\exists x\phi)^{M, E}</m> is the formula <m>(\exists x\in M)\phi^{M, E}</m>
+      </p>
+    </li>
+  </ol>
+  with the other logical connections and <m>\forall</m> handled similarly.
+</definition>
 
+<p>
+Note that since we have formulas (possibly with parameters) defining <m>M</m> and <m>E</m>, each formula 
+of the form <m>\phi^{M, E}</m> (which likely involves the symbols <m>M</m> or <m>E</m>) is 
+really just a formula in the language of set theory.
+</p>
+
+<p>When the relation <m>E</m> is the standard <m>\in</m>, then we suppress the use of <m>E</m> in our
+notation =-</p>
 </section>
