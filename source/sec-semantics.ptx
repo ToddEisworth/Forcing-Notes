@@ -52,5 +52,19 @@ really just a formula in the language of set theory.
 </p>
 
 <p>When the relation <m>E</m> is the standard <m>\in</m>, then we suppress the use of <m>E</m> in our
-notation =-</p>
+notation, that is, we will write <m>\phi^M</m> instead of <m>\phi^{M,\in}</m></p>
+
+<lemma>
+  <p>If all free variables of <m>\phi(x_1,\dots, x_n)</m> are included in <m>x_1,\dots,x_n</m> then 
+  <md>
+    <mrow>(x_1\in M\wedge\dots\wedge x_n\in M)\longrightarrow (\phi(x_1,\dots,x_n)\leftrightarrow\phi^M(x_1,\dots,x_n))^M\amp </mrow>
+  </md>
+</p>
+</lemma>
+<proof>
+  <p>
+    If <m>\phi</m> has the form <m>x\in y</m> and both <m>x</m> and <m>y</m> appear among the <m>x_i</m> 
+    then 
+  </p>
+</proof>
 </section>
