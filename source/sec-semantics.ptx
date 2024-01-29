@@ -1,70 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-section-semantics" >
-  <title>Semantics</title>
+  <title>Relativisation</title>
 
-<p>Suppose we are given a class <m>M</m> and relational class <m>E\subseteq M\times M</m>.  What
-   should it mean to say that a sentence <m>\phi</m> of the language of set theory 
-holds in the structure <m>\langle M, E\rangle</m>?  
+<p>Suppose we are given a class <m>M</m> and a sentence <m>\varphi</m> of the language of set theory.
+What should it mean for the sentence <m>\varphi</m> to be ``true in <m>M</m>''?  Our goal in this section
+is to define a correspondence <m>\varphi\mapsto\varphi^M</m> between formulas, and then to use this to 
+provide an answer to this question.
 </p>
 
 \begin{<definition>
-  Let <m>M</m> be a class and let <m>E</m> be a binary relation on <m>M</m>.  Given a formula <m>\phi(x_1,\dots,x_n)</m>
-  of the language of set theory, the <term>relativization of <m>\phi</m> to <m>\langle M, E\rangle</m></term>
+  Let <m>M</m> be a class.  Given a formula <m>\varphi(x_1,\dots,x_n)</m>
+  of the language of set theory, the <term>relativization of <m>\varphi</m> to <m> M</m></term>
   is the formula <md>
-    <mrow> \amp\phi^{M, E}(x_1,\dots,x_n)  </mrow>
+    <mrow> \amp\varphi^{M}(x_1,\dots,x_n)  </mrow>
   </md>
   defined inductively by
   <ol>
     <li>
       <p>
-        <m>(x\in y)^{M, E}</m>  is the formula <m>x E y</m>
+        <m>(x\in y)^{M}</m>  is the formula <m>x \in y</m>
       </p>
     </li>
     <li>
       <p>
-        <m>(x=y)^{M, E}</m> is the formula <m>x=y</m>
+        <m>(x=y)^{M}</m> is the formula <m>x=y</m>
       </p>
     </li>
     <li>
       <p>
-        <m>(\neg\phi)^{M, E}</m> is the formula <m>\neg(\phi^{M, E})</m>
+        <m>(\neg\phi)^{M}</m> is the formula <m>\neg(\phi^{M})</m>
+      </p>
+    </li>
+    <li>
+
+      <p>
+        <m>(\phi\wedge\psi)^{M}</m> is the formula <m>\phi^{M}\wedge\psi^{M}</m>
       </p>
     </li>
     <li>
       <p>
-        <m>(\phi\wedge\psi)^{M, E}</m> is the formula <m>\phi^{M, E}\wedge\psi^{M, E}</m>
-      </p>
-    </li>
-    <li>
-      <p>
-        <m>(\exists x\phi)^{M, E}</m> is the formula <m>(\exists x\in M)\phi^{M, E}</m>
+        <m>(\forall x\phi)^{M}</m> is the formula <m>(\forall x\in M)\phi^{M}</m>
       </p>
     </li>
   </ol>
-  with the other logical connections and <m>\forall</m> handled similarly.
+  with the other logical connections and <m>\exists</m> handled similarly.
 </definition>
 
 <p>
-Note that since we have formulas (possibly with parameters) defining <m>M</m> and <m>E</m>, each formula 
-of the form <m>\phi^{M, E}</m> (which likely involves the symbols <m>M</m> or <m>E</m>) is 
-really just a formula in the language of set theory.
+Note that since we have formulas (possibly with parameters) defining <m>M</m>, each formula 
+of the form <m>\phi^{M}</m> is really just a formula in the language of set theory.
 </p>
 
-<p>When the relation <m>E</m> is the standard <m>\in</m>, then we suppress the use of <m>E</m> in our
-notation, that is, we will write <m>\phi^M</m> instead of <m>\phi^{M,\in}</m></p>
-
-<lemma>
-  <p>If all free variables of <m>\phi(x_1,\dots, x_n)</m> are included in <m>x_1,\dots,x_n</m> then 
+<definition>
+  If <m>M</m> is a class and <m>\varphi(x_1,\dots,x_n)</m> is a formula with all free variables displayed,
+  then in the metatheory we define
   <md>
-    <mrow>(x_1\in M\wedge\dots\wedge x_n\in M)\longrightarrow (\phi(x_1,\dots,x_n)\leftrightarrow\phi^M(x_1,\dots,x_n))^M\amp </mrow>
+    <mrow>M\models \varphi(x_1,\dots,x_n) \amp </mrow>
   </md>
-</p>
-</lemma>
-<proof>
-  <p>
-    If <m>\phi</m> has the form <m>x\in y</m> and both <m>x</m> and <m>y</m> appear among the <m>x_i</m> 
-    then 
+  as an abbreviation of the formula 
+  <md>
+    <mrow>x_1\in M\wedge\dots\wedge x_n\in M\rightarrow\varphi^M(x_1,\dots,x_n) \amp </mrow>
+  </md>
+</definition>
+
+<theorem>
+  <statement> <p> Suppose <m>\Sigma</m> is a set of sentences and <m>\varphi(x_1,\dots, x_n)</m> is a logical
+  consequence of <m>\Sigma</m>.  If <m>M</m> 
+is a non-empty class and <m>M\models \Sigma</m>, then <m>M\models \varphi(x_1,\dots,x_n)</m>.
+  </p> </statement>
+</theorem>
+
+<corollary>
+  <p>Suppose <m>\Sigma\cup\{\sigma\}</m> is a set of sentences and <m>\Sigma\vdash\sigma</m>. If <m>M</m>
+    is a non-empty class and <m>M\models\Sigma</m> then <m>\sigma^M</m>.
   </p>
-</proof>
+</corollary>
 </section>
