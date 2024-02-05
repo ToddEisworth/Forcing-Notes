@@ -14,5 +14,6 @@
   <xi:include href="sec-logic.ptx" />
   <xi:include href="sec-abbreviations.ptx"/>
   <xi:include href="sec-semantics.ptx"/>
+  <xi:include href="sec-godelization.ptx" />
   <xi:include href="sec-axioms.ptx" />
 </chapter>

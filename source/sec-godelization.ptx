@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+    <title>The satisfaction relation</title>
+
+<p>Our aim in this section is develop Gödel's idea</p>
+
+<definition xml:id="def-godelnumber">
+    <statement>
+        <p>
+         For any formula <m>\varphi</m> of <m>\lst</m> we will define a corresponding
+          Gödel code <m>\ulcorner \varphi\urcorner</m>.
+          <ul>
+            <li>
+                <p>
+                    <m>\ulcorner v_i\in v_j\urcorner</m> is <m>\langle 0, i, j\rangle</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>\ulcorner v_i =v_j\urcorner</m> is <m>\langle 1, i, j\rangle</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>\ulcorner\varphi\wedge\psi\urcorner</m> is <m>\langle 2,\ulcorner\varphi\urcorner,\ulcorner\psi\urcorner\rangle</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>\ulcorner\neg\varphi\urcorner</m> is <m>\langle 3, \ulcorner\varphi\urcorner\rangle</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>\ulcorner\forall v_i \varphi\urcorner</m> is <m>\langle 4,i, \ulcorner\varphi\urcorner\rangle</m>
+                </p>
+            </li>
+          </ul>
+    
+         
+        </p>
+    </statement>
+</definition>
+<definition xml:id="def-buildup">
+    <statement>
+        <p>
+         We write <m>\Fm(u, s, n)</m> to stand for the formula that asserts the following:
+        <ul>
+            <li>
+                <p>
+                    <m>\Func(s)</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>\dom(s)=n+1</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>s(n)=u</m>
+                </p>
+            </li>
+        </ul>
+    </p>
+    </statement>
+</definition>
+</section>

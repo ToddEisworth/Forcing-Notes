@@ -3,8 +3,10 @@
 <section xml:id="sec-section-language" >
   <title>The language of set theory</title>
 
-  <p>Our version of the language of set theory will consist of a very few symbols together with some basic rules for how these symbols may be concatenated.
-     The language incorporates the following symbols:
+  <p>Our official version of the language of set theory will consist of a only a very few symbols
+     together with some basic rules for how these symbols may be concatenated.  We will augment
+     this language to make reading more comprehensible, but when we need to prove something
+     about all formulas in our language, it is convenient to have a short official list.
   </p>
 
   <definition xml:id="def-language">
@@ -39,6 +41,7 @@
 
 <definition xml:id="def-formula">
   <statement>
+    <p>
     <ol>
       <li>
         <p>
@@ -47,8 +50,8 @@
       </li>
       <li>
         <p>
-          We define a <em>formula</em> of the language of set theory to any expression generated using the following rules:
-        </p>
+          We define a <em>formula</em> of the language of set theory to any expression generated
+           using the following rules:
         <ul> 
         <li>
         <p>
@@ -66,6 +69,7 @@
            </p>
          </li>
         </ul>
+      </p>
       </li>
       <li>
         <p>
@@ -73,43 +77,73 @@
         </p>
       </li>
     </ol>
+    </p>
   </statement>
 </definition> 
 
-<p>The above is our official way of building formulas. We will shortly introduce the other standard logical 
-   symbols as abbreviations of more complex formulas from <m>\Form_{\lst}</m>, but as we expand our language we want to keep in mind that the expressions and formulas in the augmented
-   language are actually abbreviations of something written in <m>\lst.</m>  Our official language is more limited so that it is easier to make definitions and prove facts about
-   <m>\Form_{\lst}</m> without needing to break into too many cases, as illustrated
-   in the following definitions.
+
+
+<p>The above is our official way of building formulas, but of course expressing meaningful concepts in this 
+limited vocabulary quickly becomes unmanageable. Thus, our first augmentation of the official language is to add to it symbols for the other standard ingredients of first order logic.
+</p>
+<p>
+<ul>
+    <li>
+      <m>(\phi\vee\psi)</m> abbreviates <m>(\neg((\neg\phi)\wedge(\neg\psi)))</m>
+    </li>
+    <li>
+      <m>(\phi\rightarrow\psi)</m> abbreviates <m>((\neg\phi)\vee\psi)</m>
+    </li>
+    <li>
+      <m>(\phi\leftrightarrow\psi)</m> abbreviates <m>((\phi\rightarrow\psi)\vee(\psi\rightarrow\phi))</m>
+    </li>
+    <li>
+    <m>(\forall v_i\phi)</m> abbreviates <m>(\neg(\exists v_i(\neg\phi)))</m>
+    </li>
+    <li>
+    <m>(v_i\neq v_j)</m> abbreviates <m>(\neg(v_i=v_j))</m>
+  </li>
+  <li>
+      <m>(v_i\notin v_j)</m> abbreviates <m>(\neg(v_i\in v_j))</m>
+  </li>
+  <li>
+    <m>(\exists v_i\in v_j)\phi</m> abbreviates <m>(\exists v_i((v_i\in v_j)\wedge \phi))</m>
+  </li>
+  <li>
+    <m>(\forall v_i\in v_j)\phi</m> abbreviates <m>(\forall v_j((v_j\in v_i)\rightarrow\phi))</m>
+  </li>
+</ul>
 </p>
 
-<definition>
+<p>All of the above symbols are officially just abbreviations for expressions
+  written in the official language of set theory, but we do grant them a 
+  semi-official status.  This means that we will deploy them unabashedly in expressions, while
+  often restricting ourselves to the official language when building definitions or proofs that rely
+  on the way formulas are built up out the atomic formulas.. The expectation
+  is that readers can extend things to cover these semi-official symbols without much trouble.
+</p>
+
+<definition xml:id="def-subformula">
   <title>Subformulas</title>
-<statement>
-  <p> By recursion we define a function <m>\subform</m> that assigned to each formula <m>\phi</m> of <m>\lst</m> the set <m>\subform(\phi)</m> of all of its <em>subformulas</em></p> 
-  <ul>
-   <li>
-     <p>
-       If <m>\phi</m> is an atomic formula, then <m>\subform(\phi)=\phi</m>
-     </p>
-   </li>
-   <li>
-     <p>
-     <m>\subform((\phi\wedge\psi))=\subform(\phi)\cup \subform(\psi)\cup\{(\phi\wedge\psi)\}</m>
-     </p>
-   </li>
-   <li>
+  <statement>
     <p>
-      <m>\subform((\neg\phi))=\subform(\phi)\cup\{(\neg\phi)\}</m>
+      By recursion we define a function <m>\subform</m> that assigned to each formula <m>\phi</m> of <m>\lst</m> the set <m>\subform(\phi)</m> of all of its <em>subformulas</em> 
+      <ul>
+        <li>
+         If <m>\phi</m> is an atomic formula, then <m>\subform(\phi)=\phi</m>
+        </li>
+        <li>
+       <m>\subform((\phi\wedge\psi))=\subform(\phi)\cup \subform(\psi)\cup\{(\phi\wedge\psi)\}</m>
+        </li>
+        <li>
+        <m>\subform((\neg\phi))=\subform(\phi)\cup\{(\neg\phi)\}</m>
+        </li>
+        <li>
+        <m>\subform((\forall v_i\phi))=\subform(\phi)\cup\{(\forall v_i\phi)\}</m>
+        </li>
+      </ul>
     </p>
-   </li>
-   <li>
-    <p>
-      <m>\subform((\forall v_i\phi))=\subform(\phi)\cup\{(\forall v_i\phi)\}</m>
-    </p>
-   </li>
-  </ul>
-</statement>
+  </statement>
 </definition>
 
 <p>
@@ -118,6 +152,7 @@ The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and return
 <definition>
   <title>Free and Bound Variables</title>
 <statement>
+<p>
 <ol>
   <li>
     <p>
@@ -140,6 +175,7 @@ The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and return
     </p>
   </li>
 </ol>
+</p>
 </statement>
 </definition>
 </section>

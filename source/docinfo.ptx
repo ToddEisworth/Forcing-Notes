@@ -29,6 +29,12 @@
     \DeclareMathOperator{\empty}{Empty}
     \DeclareMathOperator{\Form}{Form}
     \DeclareMathOperator{\Sent}{Sent}
+    \DeclareMathOperator{\Fm}{Fm}
+    \DeclareMathOperator{\Func}{Func}
+    \DeclareMathOperator{\dom}{dom}
+    \DeclareMathOperator{\Int}{Int}
+    \DeclareMathOperator{\ZF}{ZF}
+    \DeclareMathOperator{\Sat}{Sat}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->
