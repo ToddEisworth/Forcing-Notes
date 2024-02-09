@@ -39,4 +39,35 @@
       </p>
     </statement>
   </definition>
+
+<theorem>
+<statement>
+  <p>
+    Suppose <m>\Sigma</m> is a set of sentences and <m>\Sigma\vdash\sigma</m>.  If <m>T</m>
+    is a set of sentences and <m>M</m> is a class such that
+    <ol>
+      <li>
+        <p>
+          <m>T\vdash M\neq\emptyset</m>, and
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>T\vdash \phi^M</m> for every <m>\phi\in\Sigma</m>.
+        </p>
+      </li>
+    </ol>
+    Then <m>T\vdash \sigma^M</m>.
+  </p>
+</statement>
+</theorem>
+
+  <lemma xml:id="lem-logax">
+    <statement>
+      <p>
+        If <m>T\vdash M\neq\emptyset</m> then <m>T\vdash\phi^M</m> for any logical axiom <m>\varphi</m>.
+        
+      </p>
+    </statement>
+  </lemma>
 </section>
