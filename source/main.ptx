@@ -13,7 +13,7 @@
 
     <!-- Include chapters -->
     <xi:include href="./ch-logic.ptx" />
-    <xi:include href="./ch-wf.ptx" />
+    <xi:include href="./ch-relativization.ptx" />
 
 
     <!-- Include backmatter -->

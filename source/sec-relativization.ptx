@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-relativization" >
+  <title>Relativization</title>
+
+
+  <definition xml:id="def-relativize">
+    <statement>
+      <p>
+       Let <m>M</m> be a class.  Given a formula <m>\phi</m> we define the relativization
+       <m>\phi^M</m> of <m>\phi</m> to <m>M</m> by induction on the structure of <m>\phi</m>
+       <ol>
+        <li>
+          <p>
+            <m>(x=y)^M</m> is <m>x=y</m>
+          </p>
+        </li>
+        <li>
+          <m>(x\in y)^M</m> is <m>x\in y</m>
+        </li>
+        <li>
+          <m>(\phi\wedge\psi)^M</m> is <m>\phi^M\wedge\psi^M</m>
+        </li>
+        <li>
+          <m>(\neg\phi)^M</m> is <m>\neg(\phi^M)</m>
+        </li>
+        <li>
+          <m>(\exists v_i\phi)^M</m> is <m>\exists v_i(v_i\in M\wedge\phi^M)</m>
+        </li>
+       </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-truthinM">
+    <statement>
+      <p>
+      If <m>M</m> is a class and <m>\phi</m> 
+      </p>
+    </statement>
+  </definition>
+</section>

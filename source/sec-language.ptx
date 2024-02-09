@@ -98,7 +98,7 @@ limited vocabulary quickly becomes unmanageable. Thus, our first augmentation of
       <m>(\phi\leftrightarrow\psi)</m> abbreviates <m>((\phi\rightarrow\psi)\vee(\psi\rightarrow\phi))</m>
     </li>
     <li>
-    <m>(\forall v_i\phi)</m> abbreviates <m>(\neg(\exists v_i(\neg\phi)))</m>
+    <m>(\exists v_i\phi)</m> abbreviates <m>(\neg(\forall v_i(\neg\phi)))</m>
     </li>
     <li>
     <m>(v_i\neq v_j)</m> abbreviates <m>(\neg(v_i=v_j))</m>
@@ -120,7 +120,8 @@ limited vocabulary quickly becomes unmanageable. Thus, our first augmentation of
   semi-official status.  This means that we will deploy them unabashedly in expressions, while
   often restricting ourselves to the official language when building definitions or proofs that rely
   on the way formulas are built up out the atomic formulas.. The expectation
-  is that readers can extend things to cover these semi-official symbols without much trouble.
+  is that readers can extend things to cover these semi-official symbols without much trouble, as we illustrate
+  with the following definition and subsequent discussion.
 </p>
 
 <definition xml:id="def-subformula">
@@ -147,7 +148,10 @@ limited vocabulary quickly becomes unmanageable. Thus, our first augmentation of
 </definition>
 
 <p>
-The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and returns the collection of all the formulas of <m>\lst</m> that are used to build <m>\phi</m>.  
+The above function takes as input a formula <m>\phi</m> of<m>\lst</m> and returns the collection of all the formulas of <m>\lst</m> that are used to build <m>\phi</m>. 
+If we work with formulas that involve our semi-official symbols like <m>\exists</m> or 
+<m>\leftrightarrow</m>, then we can extend the notion of subformulas in the obvious way
+ to cover their use as well. 
 </p>
 <definition>
   <title>Free and Bound Variables</title>
