@@ -100,18 +100,6 @@ limited vocabulary quickly becomes unmanageable. Thus, our first augmentation of
     <li>
     <m>(\exists v_i\phi)</m> abbreviates <m>(\neg(\forall v_i(\neg\phi)))</m>
     </li>
-    <li>
-    <m>(v_i\neq v_j)</m> abbreviates <m>(\neg(v_i=v_j))</m>
-  </li>
-  <li>
-      <m>(v_i\notin v_j)</m> abbreviates <m>(\neg(v_i\in v_j))</m>
-  </li>
-  <li>
-    <m>(\exists v_i\in v_j)\phi</m> abbreviates <m>(\exists v_i((v_i\in v_j)\wedge \phi))</m>
-  </li>
-  <li>
-    <m>(\forall v_i\in v_j)\phi</m> abbreviates <m>(\forall v_j((v_j\in v_i)\rightarrow\phi))</m>
-  </li>
 </ul>
 </p>
 
@@ -153,33 +141,28 @@ If we work with formulas that involve our semi-official symbols like <m>\exists<
 <m>\leftrightarrow</m>, then we can extend the notion of subformulas in the obvious way
  to cover their use as well. 
 </p>
-<definition>
-  <title>Free and Bound Variables</title>
-<statement>
+
 <p>
-<ol>
+There are a few other standard strings that we introduce to serve as abbreviations for longer constructions.
+These are all standard and used freely, but we don't grant them the same semi-official
+status as those symbols introduced earlier.
+<ul>
   <li>
-    <p>
-      The <term>range</term> of an occurence of a quantifier <m>\forall v_i</m> in a formula <m>\phi</m>
-      is the unique subformula <m>(\forall v_i\psi)</m> of <m>\phi</m> beginning with
-      the occurence in question.
-    </p>
+    <m>(v_i\neq v_j)</m> abbreviates <m>(\neg(v_i=v_j))</m>
   </li>
   <li>
-    <p>
-    An occurence of a variable <m>v_i</m> in a formula is <term>bound</term>
-    if it is within the range of a quantifier of the form <m>\forall v_i</m>. Otherwise
-    the occurence is <term>free</term>.
-    </p>
+      <m>(v_i\notin v_j)</m> abbreviates <m>(\neg(v_i\in v_j))</m>
   </li>
   <li>
-    <p>
-      A formula without free variables is called a <term>sentence</term>, and we 
-      let <m>\Sent_{\lst}</m> denote the collection of sentences in our language <m>\lst</m>.
-    </p>
+    <m>(\exists v_i\in v_j)\phi</m> abbreviates <m>(\exists v_i((v_i\in v_j)\wedge \phi))</m>
   </li>
-</ol>
+  <li>
+    <m>(\forall v_i\in v_j)\phi</m> abbreviates <m>(\forall v_j((v_j\in v_i)\rightarrow\phi))</m>
+  </li>
+</ul>
+
+Finally, we will relax a rules in the interest of readability by using arbitrary letters as variables
+instead of just symbols <m>v_i</m>, and drop parentheses in expressions if there is little threat
+of misinterpretation.
 </p>
-</statement>
-</definition>
 </section>

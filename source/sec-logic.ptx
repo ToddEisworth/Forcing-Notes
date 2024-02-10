@@ -1,11 +1,44 @@
 <section xml:id="sec-">
-    <title>Logical Axioms</title>
+    <title>Logical axioms</title>
     
     <p>
     Our formal concept of proof is grounded in standard first order logic with an equality symbol.
-    The exact formulation does matter very much, but for definitiveness we will work with
-    the following logical axioms and rules of inference: 
+    The exact formulation does matter very much, but for definitiveness we lay it out in this section.
     </p>
+    <p>
+     The following notion is standard, but it gives us another opportunity to practice
+     thinking about induction on the structure of formulas of <m>\lst</m>.   
+    </p>
+
+    <definition>
+        <title>Free and Bound Variables</title>
+      <statement>
+      <p>
+      <ol>
+        <li>
+          <p>
+            The <term>range</term> of an occurence of a quantifier <m>\forall v_i</m> in a formula <m>\phi</m>
+            is the unique subformula <m>(\forall v_i\psi)</m> of <m>\phi</m> beginning with
+            the occurence in question.
+          </p>
+        </li>
+        <li>
+          <p>
+          An occurence of a variable <m>v_i</m> in a formula is <term>bound</term>
+          if it is within the range of a quantifier of the form <m>\forall v_i</m>. Otherwise
+          the occurence is <term>free</term>.
+          </p>
+        </li>
+        <li>
+          <p>
+            A formula without free variables is called a <term>sentence</term>, and we 
+            let <m>\Sent_{\lst}</m> denote the collection of sentences in our language <m>\lst</m>.
+          </p>
+        </li>
+      </ol>
+      </p>
+      </statement>
+      </definition>
     <definition xml:id="def-FOL">
         <title>Logical Axioms</title>
         <statement>
@@ -41,20 +74,65 @@
             </ol>
         </statement>
     </definition>
-<p> The rules of inference we adopt are as follows:</p>
-<ul>
-    <li>
+
+<definition xml:id="def-inference">
+    <title>Rules of Inference</title>
+    <statement>
         <p>
-            <m>\psi</m> follows from <m>\phi</m> and <m>\phi\rightarrow\psi</m>, and
+        The rules of inference we adopt are as follows:  
+        <ul>
+            <li>
+                <p>
+                    <m>\psi</m> follows from <m>\phi</m> and <m>\phi\rightarrow\psi</m>, and
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>(\forall x)\phi</m> follows from <m>\phi</m>.    
+                </p>
+            </li>
+        </ul> 
+    
         </p>
-    </li>
-    <li>
+    </statement>
+</definition>
+
+<definition xml:id="def-formalproof">
+    <title>Formal proofs</title>
+    <statement>
         <p>
-            <m>(\forall x)\phi</m> follows from <m>\phi</m>.    
-        </p>
-    </li>
-</ul>
-<p>
-    So the question is whether or not this is a wizywg
-</p>
+         Suppose <m>\Sigma</m> is a set of sentences from <m>\lst</m>, and <m>\phi</m>
+         is a formula. 
+
+         <ol> 
+            <li> 
+             <p>
+                A <term>formal proof</term> of <m>\varphi</m> from <m>\Sigma</m> is a 
+                sequence <m>\eta_1,\dots,\eta_k</m> of formulas such that
+                <ol>
+                    <li>
+                    <p>
+                        Each <m>\eta_i</m> is either a logical axiom (as above), a sentence from
+                        <m>\Sigma</m>, or the result of applying a rule of inference to formulas drawn from
+                        the formulas <m>\eta_j</m> with <m>j &lt; i</m>, and
+                    </p>
+                    </li>
+                    <li>
+                    <p>
+                     <m>\eta_k</m> (the final formula) is <m>\varphi</m>.
+                    </p>
+                    </li>
+                  </ol>
+             </p>
+            </li> 
+            <li>
+            <p>
+            We write <m>\Sigma\vdash\phi</m> to indicate that there is a formal proof of <m>\phi</m> 
+            from <m>\Sigma</m>.  
+            </p>
+            </li>
+         </ol>
+    </p>
+    </statement>
+</definition>
 </section>
